@@ -1,0 +1,268 @@
+* {box-sizing: border-box;}
+
+a {display: inline-block;}
+
+header {
+    background-color: rgb(58, 82, 118);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 80px;
+}
+
+.logo { width: 60px;}
+
+header .container nav a {
+    text-decoration: none;
+    margin: 0 20px;
+    color: white;
+}
+
+nav {margin-left: auto; display: flex;}
+
+header .container nav a:hover {color: aquamarine;}
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.boton-azul, .boton-azul1 {
+    background-color: transparente;
+    color: white;
+    border: 2px solid rgb(76, 211, 216);
+    padding: 10px 40px;
+    font-weight: bold;
+}
+
+.boton-azul:hover, .boton-azul1:hover {background-color: rgb(76, 211, 216); color: white;}
+.boton-roja {
+    background-color: transparent;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid rgb(76, 211, 216);
+    border-radius: 25px;
+    padding: 10px 50px;
+    border-radius: 25px;
+}
+.boton-roja:hover {background-color: rgb(76, 211, 216); color: white;}
+
+/* Contenido principal */
+#inicio {
+    position: relative;
+    height: 100%;
+    background-color: rgb(99, 153, 199);
+}
+
+#inicio img {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+.linea-horizontal {
+    width: 1.5cm;
+    height: 2px;
+    background-color: rgb(76, 211, 216);
+    border: none;
+    margin: 0 0 10px 0;
+}
+.bloque-inicio {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 400px;
+}
+
+h1 {font-size: 46px; margin-bottom: 20px;}
+
+p {font-size: 20px; margin-bottom: 20px;}
+
+/* servicios*/
+.seccion { padding: 100px 0; background-color: rgb(240, 247, 253);}
+.container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+.fila {display: flex; flex-wrap: wrap; justify-content: space-between;}
+.columna {padding-left: 10px; padding-right: 10px;}
+.columna-33 {width: 48%; margin-bottom: 20px;}
+.bloque-servicio1 {
+    color: rgb(74, 102, 125);
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+.bloque-servicio1 h3 {font-size: 45px;}
+.bloque-servicio {
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    border: 1px solid rgb(210, 210, 211);
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    margin: 25px auto 0;
+}
+input,textarea {
+    background-color: rgb(240, 247, 253);
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px; 
+    border: 1px solid rgb(210, 210, 211);
+    
+}
+/*quienessomos*/
+.banner {
+    position: relative;
+    height: 470px;
+    background-color: rgb(99, 153, 199);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    opacity: 0.4;
+}
+.banner-text-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 1;
+}
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: left;
+}
+.banner-text h1 {
+    font-size: 2.9rem;
+}
+
+.banner-text p {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* blog*/
+.about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 180px;
+    padding-bottom: 180px;
+    background-color: rgb(240, 247, 253);
+  }
+.image-container {width: 80%; margin-top: 15px;}
+.text-container {color: rgb(74, 102, 125); width: 50%;}
+.text-container h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+.ajustar-imagen {
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+  }
+/* Footer */
+footer {
+    background-color: rgb(119, 119, 119);
+     color: white;
+     text-align: center;
+     padding: 20px;
+ }
+ /* Estilos para menú hamburguesa */
+.hamburger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamb {
+    width: 20px;
+    height: 2px;
+    background: rgb(76, 211, 216);
+    margin: 4px 0;
+}
+
+/* Estilos responsive */
+@media screen and (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: rgb(58, 82, 118);
+        width: 100%;
+        padding: 10px 0;
+        z-index: 1;
+        text-align: center;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger-menu {
+        display: flex;
+    }
+    
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .columna-33 {
+        width: 100%;
+    }
+    .bloque-inicio {
+        max-width: 90%;
+        left: 5%;
+    }
+
+    .banner-text h1 {
+        font-size: 35px;
+    }
+    .about-section {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .text-container, .image-container {
+        width: 100%;
+    }
+}
